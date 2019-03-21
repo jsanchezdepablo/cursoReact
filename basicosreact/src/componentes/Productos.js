@@ -7,11 +7,12 @@ class Productos extends React.Component{
         return(
             <React.Fragment>
                 <h2>Listado de Productos</h2>
-                {   
-                    this.props.productos.forEach(producto => {
-                        <Producto
-                            // producto = {producto.nombre}
-                        
+               {
+                    this.props.productos.map((element, key) => {
+                        return <Producto
+                            key = {key}
+                            valor = {key}
+                            producto = {this.props.productos[key]}
                         />
                     })
                 }
