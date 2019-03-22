@@ -3,6 +3,11 @@ import Header from "./Header";
 import Formulario from "./Formulario";
 
 class App extends Component {
+
+    recibirDatosForm = (datos) =>{
+        console.log(datos);
+    }
+
     render() {
         let titulo = "Cotizador de Seguro de Auto";
         return (
@@ -12,7 +17,10 @@ class App extends Component {
                 />
 
                 <div className="contenedor-formulario">
-                    <Formulario/>
+                    {/*Recibir datos del componente para usarlos en otros componentes*/}
+                    <Formulario
+                        datosForm = {this.recibirDatosForm}
+                    />
                 </div>
 
             </div>
